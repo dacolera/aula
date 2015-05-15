@@ -1,0 +1,18 @@
+{
+    "name" : "brand/project",
+    "description" : "Project Description",
+    "keywords" : [
+        "Project First Tag",
+        "Project Second Tag",
+        "Project Third Tag"
+    ],
+    "homepage" : "http://www.example.com/",
+    "require-dev" : {
+    	"phpunit" : "*"
+    },
+    "autoload" : {
+    	"psr-4" : {
+    		"classes\\" : "classes"
+    	}
+    }
+}
