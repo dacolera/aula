@@ -1,6 +1,6 @@
 <?php
 
-use Classes\Math;
+use Classes\Matematica\Math;
 
 class MathTest extends PHPUnit_Framework_TestCase {
 
