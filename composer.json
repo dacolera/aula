@@ -1,12 +1,12 @@
 {
-    "name" : "brand/project",
-    "description" : "Project Description",
+    "name" : "catho/teste_arquitetura",
+    "description" : "Simples teste de arquitetura",
     "keywords" : [
-        "Project First Tag",
-        "Project Second Tag",
-        "Project Third Tag"
+        "Arquitetura",
+        "teste",
+        "simples"
     ],
-    "homepage" : "http://www.example.com/",
+    "homepage" : "http://www.catho.com.br/",
     "require-dev" : {
     	"phpunit/phpunit" : "*"
     },
