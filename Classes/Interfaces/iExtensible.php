@@ -6,5 +6,5 @@ use Classes\Interfaces\iOpcional;
 
 interface iExtensible {
 
-	public function setOpcionais(iOpcional $opcional);
+	public function addOpcional(iOpcional $opcional);
 }
