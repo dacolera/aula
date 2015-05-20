@@ -19,9 +19,10 @@ class Carro  implements iExtensible {
 		$this->carroceria = $carroceria;
 	}
 
-	public function addOpcional(iOpcional $opcional) {
+	public function addOpcional($opcional) {
 
 		array_push($this->opcionais, $opcional);
+		return $this;
 	}
 
 	public function getOpcionais() {

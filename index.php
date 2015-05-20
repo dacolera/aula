@@ -6,26 +6,28 @@ error_reporting(E_ALL);
 
 require 'vendor/autoload.php';
 
-use Classes\Carro;
-use Classes\Motor2L;
-use Classes\CarroceriaVolkswagen;
-use Classes\RodaMomo;
-use Classes\Interfaces\iCarroceria;
+use Classes\Factories\CarroFactory as Carro;
+use Classes\Interfaces\iOpcional;
+use Classes\Factories\CarroTopFactory as CarroTop;
 
 //rodas
-$rodas = new RodaMomo();
-$rodas
-	->setSize(20)
-	->calibrar(28);
 
-//carroceria
-$carroceria = new CarroceriaVolkswagen();
-$carroceria
-	->setPortas(4)
-	->setType(iCarroceria::HATCH)
-	->setRodas($rodas);
+//carro sem opcionais
+var_dump(Carro::build());
 
+print '<hr>';
 
-$golGti = new Carro( new Motor2L(), $carroceria);
+//primeira forma de criar o mesmo carro com 3 itens opcionais
+$carroTop = Carro::build();
+$carroTop
+	->addOpcional(iOpcional::AR_CONDICIONADO)
+	->addOpcional(iOpcional::DIRECAO_HIDRAULICA)
+	->addOpcional(iOpcional::SOUND_SYSTEM);
 
-var_dump($golGti);
+var_dump($carroTop);	
+
+print '<hr>';
+
+//segunda forma de criar um carro top com todos os opcionais
+
+var_dump(CarroTop::build());
